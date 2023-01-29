@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quiz
+{% endblock %}
+
+{% block main %}
+
+
+<div class="main">
+    <div class="biology-text">
+        <h1>The Biology Quiz</h1>
+          <form name="bioQuiz" action="/scores", method="post">
+            {% for question in questions_list %}
+            <h3>
+              {{question.question}}</h3>
+              <h5>
+                <label class="container">
+                  <input type="radio" name="{{question.q_id}}" value="{{question.option1}}" required> {{question.option1}} <br>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                  <input type="radio" name="{{question.q_id}}" value="{{question.option2}}" required> {{question.option2}} <br>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                  <input type="radio" name="{{question.q_id}}" value="{{question.option3}}" required> {{question.option3}} <br>
+                  <span class="checkmark"></span>
+                </label>
+              </h5> <br>
+            {% endfor %}
+            <input type="submit" name="submitform" values="Submit" id="submit">
+          </form>
+    </div>
+</div>
+
+{% endblock %}

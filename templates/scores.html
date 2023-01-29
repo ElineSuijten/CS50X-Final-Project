@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Scores
+{% endblock %}
+
+{% block main %}
+<div class="main">
+    <div class="biology-text">
+        <h1>Scores</h1><br>
+        {% if score_counter >= 1 %}
+        <h3> Your most recent score is {{result}}/25</h3><br>
+        <table id="scores">
+            <tr>
+              <th> Your High Scores</th>
+              <th>Results</th>
+            </tr>
+            {% if score_counter == 1 %}
+            <tr>
+              <td>1</td>
+              <td>{{high1}}/25</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>-</td>
+            </tr>
+            {% elif score_counter == 2 %}
+            <tr>
+              <td>1</td>
+              <td>{{high1}}/25</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>{{high2}}/25</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>-</td>
+            </tr>
+            {% elif score_counter >= 3 %}
+            <tr>
+              <td>1</td>
+              <td>{{high1}}/25</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>{{high2}}/25</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>{{high3}}/25</td>
+            </tr>
+            {% endif %}
+          </table> <br><br>
+
+          {% else %}
+          <h3> You don't have a score yet, do the quiz to see your score.</h3><br>
+          {% endif %}
+
+        <h6> You attempted the quiz {{score_counter}} time(s)</h6>
+
+        {% if score_counter >= 1 %}
+        <form action="https://elinesuijten-code50-112330653-x74gr95p496h6xxp-5000.preview.app.github.dev/answers">
+          <button class="btn btn-primary" type="submit" id="submit">Answers</button><br><br>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+

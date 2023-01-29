@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+<div class="main">
+    <section class="cells">
+        <div class ="main">
+            <img src="/static/biology.jpg" alt="biology pict">
+            <div class="biology-text">
+                <h1>BIOLOGY QUIZ</h1>
+                <h5>Test your general biology knowledge!</h5>
+                <p> This biology quiz tests your general biology knowledge. The quiz constists of 25 questions. After finishing you will see your score.
+                </p>
+                {% if session["user_id"] %}
+                    <form action="https://elinesuijten-code50-112330653-x74gr95p496h6xxp-5000.preview.app.github.dev/quiz">
+                    <button>Start Quiz</button>
+                    </form>
+                {% else %}
+                    <form action="https://elinesuijten-code50-112330653-x74gr95p496h6xxp-5000.preview.app.github.dev/login">
+                    <button>Log In</button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+

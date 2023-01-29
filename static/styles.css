@@ -1,0 +1,182 @@
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/static/cells.jpg");
+    height: 1000px;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+.bg-dark{
+    background: linear-gradient(0deg, #454140, #1A1818);
+  }
+
+.navbar-brand{
+    font-size: 22px;
+  }
+
+h3{
+    color:  white;
+  }
+
+.cells{
+    width: 100%;
+    padding: 78px 0px;
+  }
+
+.biology-text{
+    width: 550px;
+  }
+
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+.biology-text h1{
+    color: white;
+    text-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+
+.biology-text h5{
+    color: white;
+    text-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-space: 2px;
+  }
+
+.biology-text h6{
+    color: white;
+    text-size: 25px;
+    margin-bottom: 25px;
+    letter-space: 2px;
+  }
+
+.biology-text p{
+    color: white;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+  }
+
+/* Button layout */
+button{
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+    background-color: #008000;
+    color: white;
+  }
+
+/* Submit buttons */
+#submit{
+      border: 2px solid transparent;
+      font-weight: bold;
+      padding: 13px 30px;
+      border-radius: 30px;
+      transition: .4s;
+      background-color: #008000;
+      color: white;
+  }
+
+
+  /* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button reference: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Reference score table layout https://www.w3schools.com/css/tryit.asp?filename=trycss_table_fancy */
+
+#scores {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#scores td, #scores th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#scores tr:nth-child(even){background-color: #f2f2f2;}
+#scores tr:nth-child(odd){background-color: #d3d3d3;}
+
+#scores th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #020121;
+  color: white;
+}
