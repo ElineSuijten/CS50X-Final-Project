@@ -2,7 +2,7 @@
 ### Made by: Eline Suijten
 ### Video Demo: https://youtu.be/eP3H7dag5GQ
 ## Background Information:
-This project was the final project for the course CS50x Introduction to Programming. With zero programming experiences I started this course. Therefore, the final project was my first programming project. I can not wait to learn more and see my improvements over time!
+This project was the final project for the course CS50x Introduction to Programming. With zero programming experiences I started this course. Therefore, the final project was my first programming project. This project has a lot of flaws, but because it is the first thing I created, I decide to keep it public.
 
 ## Technologies used:
 * Python (Flask)
